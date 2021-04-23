@@ -4,7 +4,7 @@ import time
 class PulsarProducer:
 
   def __init__(self):
-    self.client = pulsar.Client('pulsar://localhost:6651')
+    self.client = pulsar.Client('pulsar://localhost:6443')
     self.producer = self.client.create_producer('my-topic')
 
   def Run(self):

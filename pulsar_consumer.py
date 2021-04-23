@@ -4,7 +4,7 @@ import time
 class PulsarConsumer:
 
   def __init__(self):
-    self.client = pulsar.Client('pulsar://localhost:6651')
+    self.client = pulsar.Client('pulsar://localhost:6443')
     self.consumer = self.client.subscribe('my-topic', 'my-subscription')
 
   def Run(self):
