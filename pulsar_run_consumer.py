@@ -12,7 +12,7 @@ consumer = PulsarConsumer(rec_address, rec_port)
 c_thread = threading.Thread(target=consumer.Setup)
 c_thread.start()
 
-time.sleep(10)
+time.sleep(15)
 
 consumer.Run()
 
