@@ -5,12 +5,13 @@ import threading
 import time
 
 send_address = 'localhost'
-send_port = 6650
+send_port = 6443
 
 producer = PulsarProducer(send_address, send_port)
 
-p_thread = threading.Thread(producer.Run)
-p_thread.start()
+producer.Run()
+#p_thread = threading.Thread(producer.Run)
+#p_thread.start()
 
 while True:
   time.sleep(1)
