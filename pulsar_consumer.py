@@ -4,16 +4,16 @@ import time
 class PulsarConsumer:
 
   def __init__(self, address, port):
-    config = 'pulsar://' + address
-    config = config.rstrip() + ':'
-    config = config.rstrip() + str(port)
-    config = config.rstrip()
+    self.config = 'pulsar://' + address
+    self.config = self.config.rstrip() + ':'
+    self.config = self.config.rstrip() + str(port)
+    self.config = self.config.rstrip()
 
     self.filename = "consumer_out.txt"
     self.write = open(self.filename, "w")
     
   def Setup(self):
-    self.client = pulsar.Client(config)
+    self.client = pulsar.Client(self.config)
     time.sleep(10)
     self.consumer = self.client.subscribe('my-topic', 'my-subscription')
 
