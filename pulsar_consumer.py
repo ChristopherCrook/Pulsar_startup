@@ -5,6 +5,7 @@ class PulsarConsumer:
 
   def __init__(self, address, port):
     config = 'pulsar://' + address
+    config = config.rstrip() + ':'
     config = config.rstrip() + str(port)
     config = config.rstrip()
     self.client = pulsar.Client(config)
