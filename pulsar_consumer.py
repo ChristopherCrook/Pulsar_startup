@@ -15,7 +15,7 @@ class PulsarConsumer:
   def Setup(self):
     self.client = pulsar.Client(self.config)
     time.sleep(10)
-    self.consumer = self.client.subscribe('my-topic', 'my-subscription')
+    self.consumer = self.client.subscribe('persistent://sample/standalone/ns1/my-topic', 'my-subscription')
 
   def Run(self):
     while True:
