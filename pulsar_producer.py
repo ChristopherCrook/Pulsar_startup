@@ -8,12 +8,14 @@ class PulsarProducer:
     config = config.rstrip() + ':'
     config = config.rstrip() + str(port)
     config = config.rstrip()
+
+    self.filename = "producer_out.txt"
+    self.write = open(self.filename, "w")
+    
+  def Setup(self):
     self.client = pulsar.Client(config)
     time.sleep(10)
     self.producer = self.client.create_producer('my-topic')
-    time.sleep(10)
-    self.filename = "producer_out.txt"
-    self.write = open(self.filename, "w")
 
   def Run(self):
     for i in range(1000):
