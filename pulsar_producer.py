@@ -40,7 +40,7 @@ class PulsarProducer:
         break
       ts = time.time()
       print(ts)
-      self.write.write(ts + "\n")
+      self.write.write(str(ts) + "\n")
       self.producer.send(line.encode('utf-8'))
       
     file1.close()
@@ -58,7 +58,7 @@ class PulsarProducer:
         break
       ts = time.time()
       print(ts)
-      self.write.write(ts + "\n")
+      self.write.write(str(ts) + "\n")
       self.producer.send(line.encode('utf-8'))
       
     file1.close()
@@ -76,7 +76,7 @@ class PulsarProducer:
         break
       ts = time.time()
       print(ts)
-      self.write.write(ts + "\n")
+      self.write.write(str(ts) + "\n")
       self.producer.send(line.encode('utf-8'))
       
     file1.close()
@@ -94,7 +94,7 @@ class PulsarProducer:
         break
       ts = time.time()
       print(ts)
-      self.write.write(ts + "\n")
+      self.write.write(str(ts) + "\n")
       self.producer.send(line.encode('utf-8'))
       
     file1.close()
@@ -112,7 +112,7 @@ class PulsarProducer:
         break
       ts = time.time()
       print(ts)
-      self.write.write(ts + "\n")
+      self.write.write(str(ts) + "\n")
       self.producer.send(line.encode('utf-8'))
       
     file1.close()

@@ -24,6 +24,6 @@ class PulsarConsumer:
       self.consumer.acknowledge(msg)
       ts = time.time()
       print(ts)
-      self.write.write(ts + "\n")
+      self.write.write(str(ts) + "\n")
 
     self.client.close()
