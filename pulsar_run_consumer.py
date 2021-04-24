@@ -9,7 +9,7 @@ rec_port = 6443
 
 consumer = PulsarConsumer(rec_address, rec_port)
 
-c_thread = threading.Thread(consumer.Setup args=(,))
+c_thread = threading.Thread(consumer.Setup, args=(,))
 c_thread.start()
 
 time.sleep(5)
