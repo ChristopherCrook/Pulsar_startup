@@ -9,7 +9,7 @@ send_port = 6443
 
 producer = PulsarProducer(send_address, send_port)
 
-p_thread = threading.Thread(producer.Setup, args=(,))
+p_thread = threading.Thread(target=producer.Setup, args=(,))
 p_thread.start()
 
 time.sleep(5)
