@@ -9,6 +9,8 @@ class PulsarConsumer:
     config = config.rstript()
     self.client = pulsar.Client(config)
     self.consumer = self.client.subscribe('my-topic', 'my-subscription')
+    self.filename = "consumer_out.txt"
+    self.write = open(self.filename, "w")
 
   def Run(self):
     while True:
@@ -17,5 +19,6 @@ class PulsarConsumer:
       self.consumer.acknowledge(msg)
       ts = time.time()
       print(ts)
+      self.write.write(ts + "\n")
 
     self.client.close()

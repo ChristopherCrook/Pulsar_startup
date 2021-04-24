@@ -9,6 +9,8 @@ class PulsarProducer:
     config = config.rstript()
     self.client = pulsar.Client(config)
     self.producer = self.client.create_producer('my-topic')
+    self.filename = "producer_out.txt"
+    self.write = open(self.filename, "w")
 
   def Run(self):
     for i in range(1000):
@@ -33,6 +35,7 @@ class PulsarProducer:
       break
     ts = time.time()
     print(ts)
+    self.write.write(ts + "\n")
     self.producer.send(line.encode('utf-8'))
   
   def Send_Small(self):
@@ -48,6 +51,7 @@ class PulsarProducer:
         break
       ts = time.time()
       print(ts)
+      self.write.write(ts + "\n")
       self.producer.send(line.encode('utf-8'))
       
     file1.close()
@@ -65,6 +69,7 @@ class PulsarProducer:
         break
       ts = time.time()
       print(ts)
+      self.write.write(ts + "\n")
       self.producer.send(line.encode('utf-8'))
       
     file1.close()
@@ -82,6 +87,7 @@ class PulsarProducer:
         break
       ts = time.time()
       print(ts)
+      self.write.write(ts + "\n")
       self.producer.send(line.encode('utf-8'))
       
     file1.close()
@@ -99,6 +105,7 @@ class PulsarProducer:
         break
       ts = time.time()
       print(ts)
+      self.write.write(ts + "\n")
       self.producer.send(line.encode('utf-8'))
       
     file1.close()
