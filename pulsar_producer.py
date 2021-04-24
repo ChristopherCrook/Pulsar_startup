@@ -23,20 +23,22 @@ class PulsarProducer:
     self.client.close()
     
   def Send_Tiny(self):
-  file1 = open('tiny.txt', 'r')
-  count = 0
+    file1 = open('tiny.txt', 'r')
+    count = 0
   
-  while True:
-    count += 1
+    while True:
+      count += 1
     
-    line = file1.readline()
+      line = file1.readline()
     
-    if not line:
-      break
-    ts = time.time()
-    print(ts)
-    self.write.write(ts + "\n")
-    self.producer.send(line.encode('utf-8'))
+      if not line:
+        break
+      ts = time.time()
+      print(ts)
+      self.write.write(ts + "\n")
+      self.producer.send(line.encode('utf-8'))
+      
+    file1.close()
   
   def Send_Small(self):
     file1 = open('small.txt', 'r')
