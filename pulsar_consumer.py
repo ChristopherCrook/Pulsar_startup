@@ -9,7 +9,9 @@ class PulsarConsumer:
     config = config.rstrip() + str(port)
     config = config.rstrip()
     self.client = pulsar.Client(config)
+    time.sleep(10)
     self.consumer = self.client.subscribe('my-topic', 'my-subscription')
+    time.sleep(10)
     self.filename = "consumer_out.txt"
     self.write = open(self.filename, "w")
 

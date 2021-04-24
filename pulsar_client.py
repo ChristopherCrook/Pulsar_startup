@@ -5,10 +5,10 @@ import threading
 import time
 
 send_address = 'localhost'
-send_port = 5556
+send_port = 6650
 
 rec_address = 'localhost'
-rec_port = 5557
+rec_port = 6650
 
 consumer = PulsarConsumer(rec_address, rec_port)
 producer = PulsarProducer(send_address, send_port)
