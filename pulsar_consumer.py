@@ -14,6 +14,7 @@ class PulsarConsumer:
     
   def Setup(self):
     self.client = pulsar.Client(self.config)
+    time.sleep(5)
     self.consumer = self.client.subscribe('my-topic', 'my-subscription')
 
   def Run(self):

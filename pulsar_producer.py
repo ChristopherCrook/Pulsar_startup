@@ -14,6 +14,7 @@ class PulsarProducer:
     
   def Setup(self):
     self.client = pulsar.Client(self.config)
+    time.sleep(5)
     self.producer = self.client.create_producer('my-topic')
 
   def Run(self):

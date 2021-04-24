@@ -12,7 +12,7 @@ producer = PulsarProducer(send_address, send_port)
 p_thread = threading.Thread(target=producer.Setup)
 p_thread.start()
 
-time.sleep(5)
+time.sleep(10)
 producer.Run()
 
 while True:
