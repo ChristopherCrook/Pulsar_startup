@@ -6,7 +6,7 @@ class PulsarConsumer:
   def __init__(self, address, port):
     config = 'pulsar://' + address
     config = config.rstrip() + str(port)
-    config = config.rstript()
+    config = config.rstrip()
     self.client = pulsar.Client(config)
     self.consumer = self.client.subscribe('my-topic', 'my-subscription')
     self.filename = "consumer_out.txt"

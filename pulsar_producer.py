@@ -6,7 +6,7 @@ class PulsarProducer:
   def __init__(self, address, port):
     config = 'pulsar://' + address
     config = config.rstrip() + str(port)
-    config = config.rstript()
+    config = config.rstrip()
     self.client = pulsar.Client(config)
     self.producer = self.client.create_producer('my-topic')
     self.filename = "producer_out.txt"
