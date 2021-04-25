@@ -21,7 +21,7 @@ class PulsarConsumer:
   def Run(self):
     while True:
       msg = self.consumer.receive()
-      print(msg.decode('utf-8'))
+      print(msg)
       self.consumer.acknowledge(msg)
       ts = time.time()
       print(ts)

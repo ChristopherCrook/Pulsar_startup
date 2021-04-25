@@ -4,8 +4,8 @@ from pulsar_consumer import PulsarConsumer
 import threading
 import time
 
-rec_address = '129.114.25.176'
-rec_port = 6550
+rec_address = 'localhost'
+rec_port = 6650
 
 consumer = PulsarConsumer(rec_address, rec_port)
 
