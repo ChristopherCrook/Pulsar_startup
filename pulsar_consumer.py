@@ -16,7 +16,7 @@ class PulsarConsumer:
     self.filename = self.id.rstrip() + "_"
     self.filename = self.filename.rstrip() + input_file
     self.filename = self.filename.rstrip() + "_"
-    self.filename = self.filename.rstrip() + "consumer_out.txt"
+    self.filename = self.filename.rstrip() + "consumer_out.csv"
     self.write = open(self.filename, "w")
     
   def Setup(self):
@@ -31,6 +31,6 @@ class PulsarConsumer:
       self.consumer.acknowledge(msg)
       ts = time.time()
       print(ts)
-      self.write.write(str(ts) + "\n")
+      self.write.write(str(ts) + ",\n")
 
     self.client.close()

@@ -20,7 +20,7 @@ class PulsarProducer:
     self.filename = self.id.rstrip() + "_"
     self.filename = self.filename.rstrip() + input_file
     self.filename = self.filename.rstrip() + "_"
-    self.filename = self.filename.rstrip() + "producer_out.txt"
+    self.filename = self.filename.rstrip() + "producer_out.csv"
     self.write = open(self.filename, "w")
     
   def Setup(self):
@@ -37,7 +37,7 @@ class PulsarProducer:
       if line:
         ts = time.time()
         print(ts)
-        self.write.write(str(ts) + "\n")
+        self.write.write(str(ts) + ",\n")
         self.producer.send(line.encode('utf-8'))
         lastLine = line
       else:
