@@ -1,5 +1,16 @@
 ## Performance-MQ-Message Size Experiments
 
+
+For data collection, the program should output (to standard output) a CSV of message send timestamps, and a timestamp of when the acknowledge (ACK) response was received (if your MQ does not support delivery gaurantees, you will need to take some extra measures. See "Notes for MQ's Without ACK" below).
+
+Ex output:
+
+```
+1617516000,1617516005
+1617516010,1617516015
+...
+```
+
 # Experiment Configurations
 
 These are the configurations your program should be ran in. Although it is not shown, there should be a separate machine instance for the broker.
