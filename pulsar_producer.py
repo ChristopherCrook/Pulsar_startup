@@ -35,17 +35,17 @@ class PulsarProducer:
     while count < 1000:
       line = file1.readline()
       if line:
-        ts = time.time()
-        print(ts)
-        self.write.write(str(ts) + ",\n")
+        st = time.time()
         self.producer.send(line.encode('utf-8'))
+        at = time.time()
+        self.write.write(str(st) + "," + str(at) + ",\n")
         lastLine = line
       else:
-        ts = time.time()
-        print(ts)
-        self.write.write(str(ts) + "\n")
+        st = time.time()       
         self.producer.send(lastLine.encode('utf-8'))
-        
+        at = time.time()
+        self.write.write(str(st) + "," + str(at) + "\n")
+       
       count = count + 1
         
     file1.close()

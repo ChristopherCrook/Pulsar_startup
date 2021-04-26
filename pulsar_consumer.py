@@ -26,11 +26,12 @@ class PulsarConsumer:
 
   def Run(self):
     while True:
+      st = time.time()
       msg = self.consumer.receive()
       print(msg)
       self.consumer.acknowledge(msg)
-      ts = time.time()
-      print(ts)
-      self.write.write(str(ts) + ",\n")
+      at = time.time()
+      print(at)
+      self.write.write(str(st) + "," + str(at) + "\n")
 
     self.client.close()
