@@ -139,26 +139,27 @@ Run your consumer program with a matching configuration.
 
 Generate `latencies.csv` and `throughput.csv` using the program provided by the experiment designers team.
 
-Fill this table with the appropriate links:
-
 | File Name | Link |
 | --- | --- |
-| producer.csv | |
-| latencies.csv | |
-| throughput.csv| |
+| producer.csv | [Link](Data/all_producers)|
+| latencies.csv | [Link](Data/latencies.csv) |
+| throughput.csv| [Link](Data/throughput.csv)|
 
 Calculate the following data using Excel or a custom program by analyzing the data in latencies.csv and throughput.csv
 
 | Metric | Value |
 | --- | --- |
-| Processing Latency Min | |
-| Processing Latency Max | |
-| Processing Latency Average | |
-| Processing Latency Standard Deviation | |
-| Processing Throughput Min | |
-| Processing Throughput Max | |
-| Processing Throughput Average | |
-| Processing Throughput Standard Deviation | |
+| Processing Latency Min | 1.0 |
+| Processing Latency Max | 3788.0 |
+| Processing Latency Average | 243.33174193548388 |
+| Processing Latency Standard Deviation | 420.10071545796296 |
+| Processing Throughput Min | 0.0 |
+| Processing Throughput Max | 636.0 |
+| Processing Throughput Average | 65.12605042016807 |
+| Processing Throughput Standard Deviation |105.84121609850334 |
+
+
+### Please note: Due to limited resources we were unable to complete the remaining tests
 
 ## 1 Producer VM - 1 Consumer VM: 5 Instances
 
