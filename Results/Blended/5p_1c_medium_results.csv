@@ -1,0 +1,9 @@
+Metric,value
+Processing Latency Min,1.0
+Processing Latency Max,121.0
+Processing Latency Average,7.1088
+Processing Latency Standard Deviation,4.584928229904441
+Processing Throughput Min,172.0
+Processing Throughput Max,737.0
+Processing Throughput Average,625.0
+Processing Throughput Standard Deviation,185.80635080642426

@@ -2,7 +2,8 @@
 
 The goal of this experiment is to benchmark how this technology performs when hardware resources are plentiful and the number of actors (publishers and subscribers) in the system varies.
 
-Contact [@jmbeach](https://github.com/jmbeach) or [@laynemoseley](https://github.com/laynemoseley) for clarifications.
+Contact [@ChrisCrook82](https://github.com/ChrisCrook82) or [@laynemoseley](https://github.com/laynemoseley) for clarifications.
+
 
 ## Preliminary Steps
 
@@ -129,6 +130,7 @@ These tests are described in detail below and have placeholders for results.
 
 Place the redundancy implementation details here.
 
+## Please note: the provided latency and throughput calculator were unable to calculate the throughput for our results
 ## 1 Producer - 1 Consumer
 
 Run one instance of your producer program on one VM.
@@ -141,25 +143,23 @@ Generate `latencies.csv` and `throughput.csv` using the program provided by the 
 
 | File Name | Link |
 | --- | --- |
-| producer.csv | [Link](Data/all_producers)|
-| latencies.csv | [Link](Data/latencies.csv) |
-| throughput.csv| [Link](Data/throughput.csv)|
+| producer.csv | [Link](Data/actor_count/1-and-1)|
+| latencies.csv | [Link](1p-1c/latencies.csv) |
+| throughput.csv| [Link](1p-1c/throughput.csv)|
 
 Calculate the following data using Excel or a custom program by analyzing the data in latencies.csv and throughput.csv
 
-| Metric | Value |
-| --- | --- |
-| Processing Latency Min | 1.0 |
-| Processing Latency Max | 3788.0 |
-| Processing Latency Average | 243.33174193548388 |
-| Processing Latency Standard Deviation | 420.10071545796296 |
-| Processing Throughput Min | 0.0 |
-| Processing Throughput Max | 636.0 |
-| Processing Throughput Average | 65.12605042016807 |
-| Processing Throughput Standard Deviation |105.84121609850334 |
+| Metric                                  | Value             |
+| --------------------------------------- | ----------------- |
+| Processing Latency Min                  | 1.0               |
+| Processing Latency Max                  | 98.0              |
+| Processing Latency Average              | 5.5618            |
+| Processing Latency Standard Deviation   | 4.099553881632205 |
+| Processing Throughput Min               | NA                |
+| Processing Throughput Max               | NA                |
+| Processing Throughput Average           | NA                |
+| Processing Throughput Standard Deviation| NA                |
 
-
-### Please note: Due to limited resources we were unable to complete the remaining tests
 
 ## 1 Producer VM - 1 Consumer VM: 5 Instances
 
@@ -175,22 +175,22 @@ Fill this table with the appropriate links:
 
 | File Name | Link |
 | --- | --- |
-| producer.csv | |
-| latencies.csv | |
-| throughput.csv| |
+| producer.csv | [Link](Data/actor_count/1prod-5cons)|
+| latencies.csv | [Link](1p-5c/latencies.csv) |
+| throughput.csv| [Link](1p-5c/throughput.csv)|
 
 Calculate the following data using Excel or a custom program by analyzing the data in latencies.csv and throughput.csv
 
-| Metric | Value |
-| --- | --- |
-| Processing Latency Min | |
-| Processing Latency Max | |
-| Processing Latency Average | |
-| Processing Latency Standard Deviation | |
-| Processing Throughput Min | |
-| Processing Throughput Max | |
-| Processing Throughput Average | |
-| Processing Throughput Standard Deviation | |
+| Metric                                  | Value             |
+| --------------------------------------- | ----------------- |
+| Processing Latency Min                  | 0.0               |
+| Processing Latency Max                  | 88.0              |
+| Processing Latency Average              | 6.38227589575101  |
+| Processing Latency Standard Deviation   | 6.854957054540095 |
+| Processing Throughput Min               | NA                |
+| Processing Throughput Max               | NA                |
+| Processing Throughput Average           | NA                |
+| Processing Throughput Standard Deviation| NA                |
 
 ## 1 Producer VM: 5 Instances - 1 Consumer VM: 1 Instance
 
@@ -206,23 +206,26 @@ Fill this table with the appropriate links (There should be five CSV files in th
 
 | File Name | Link |
 | --- | --- |
-| producer CSV file Folder | |
-| latencies.csv | |
-| throughput.csv| |
+| producer.csv | [Link](Data/actor_count/5prod-1con)|
+| latencies.csv | [Link](5p-1c/latencies.csv) |
+| throughput.csv| [Link](5p-1c/throughput.csv)|
 
 Calculate the following data using Excel or a custom program by analyzing the data in latencies.csv and throughput.csv
 
-| Metric | Value |
-| --- | --- |
-| Processing Latency Min | |
-| Processing Latency Max | |
-| Processing Latency Average | |
-| Processing Latency Standard Deviation | |
-| Processing Throughput Min | |
-| Processing Throughput Max | |
-| Processing Throughput Average | |
-| Processing Throughput Standard Deviation | |
 
+| Metric                                  | Value             |
+| --------------------------------------- | ----------------- |
+| Processing Latency Min                  | -159999999999998.0|
+| Processing Latency Max                  | 121.0             |
+| Processing Latency Average              | -3697028508.599589|
+| Processing Latency Standard Deviation   | 769106339938.2466 |
+| Processing Throughput Min               | NA                |
+| Processing Throughput Max               | NA                |
+| Processing Throughput Average           | NA                |
+| Processing Throughput Standard Deviation| NA                |
+
+
+### Pleas note: Due to limited resources we were unable to complete all tests.
 ## 3 Producer VM's: 8 Instances - 3 Consumers VM's: 8 Instances
 
 Run eight instances of your producer on three different machines (24 instances total).

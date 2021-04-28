@@ -143,25 +143,23 @@ Fill this table with the appropriate links:
 
 | File Name      | Link |
 | -------------- | ---- |
-| producer.csv   |  [Link](../Data/tiny/producers)   |
-| latencies.csv  |  [Link](../Actor_Count/1p_1c_tiny/latencies.csv) |
-| throughput.csv |  [Link](../Actor_Count/1p_1c_tiny/throughput.csv) |
+| producer.csv   |  [Link](../Data/tiny/1-and-1)     |
+| latencies.csv  |  [Link](1p_1c_tiny/latencies.csv) |
+| throughput.csv |  [Link](1p_1c_tiny/throughput.csv)|
 
 Calculate the following data using Excel or a custom program by analyzing the data in latencies.csv and throughput.csv
 
 | Metric                                   | Value                   |
 | ---------------------------------------- | ----------------------- |
 | Processing Latency Min                   |  2.0                    |
-| Processing Latency Max                   |  27.0                   |
-| Processing Latency Average               |  5.998                  |
-| Processing Latency Standard Deviation    |  3.7379095719356252     |
-| Processing Throughput Min                |  1.0                    |
-| Processing Throughput Max                |  178.0                  |
-| Processing Throughput Average            |  142.85714285714286     |
-| Processing Throughput Standard Deviation |  62.96673346942434      |
+| Processing Latency Max                   |  98.0                   |
+| Processing Latency Average               |  7.555                  |
+| Processing Latency Standard Deviation    |  5.366169096363882      |
+| Processing Throughput Min                |  92.0                   |
+| Processing Throughput Max                |  146.0                  |
+| Processing Throughput Average            |  125.0                  |
+| Processing Throughput Standard Deviation |  17.05453437819816      |
 
-
-### Please note: Due to limited resources we were unable to complete the remaining tests
 
 ## 1 Producer VM - 1 Consumer VM: 5 Instances - Small Message Size
 
@@ -177,22 +175,23 @@ Fill this table with the appropriate links:
 
 | File Name      | Link |
 | -------------- | ---- |
-| producer.csv   |      |
-| latencies.csv  |      |
-| throughput.csv |      |
+| producer.csv   |  [Link](../Data/small/1prod-5cons) |
+| latencies.csv  |  [Link](1p_5c_small/latencies.csv) |
+| throughput.csv |  [Link](1p_5c_small/throughput.csv)|
 
 Calculate the following data using Excel or a custom program by analyzing the data in latencies.csv and throughput.csv
 
-| Metric                                   | Value |
-| ---------------------------------------- | ----- |
-| Processing Latency Min                   |       |
-| Processing Latency Max                   |       |
-| Processing Latency Average               |       |
-| Processing Latency Standard Deviation    |       |
-| Processing Throughput Min                |       |
-| Processing Throughput Max                |       |
-| Processing Throughput Average            |       |
-| Processing Throughput Standard Deviation |       |
+| Metric                                   | Value               |
+| ---------------------------------------- | ------------------- |
+| Processing Latency Min                   | 2.0                 |
+| Processing Latency Max                   | 52.0                |
+| Processing Latency Average               | 6.266               |
+| Processing Latency Standard Deviation    | 4.269364293600567   |
+| Processing Throughput Min                | 44.0                |
+| Processing Throughput Max                | 172.0               |
+| Processing Throughput Average            | 142.85714285714286  |
+| Processing Throughput Standard Deviation | 44.558682548704134  |
+
 
 ## 1 Producer VM: 5 Instances - 1 Consumer VM: 1 Instance - Medium Message Size
 
@@ -208,22 +207,23 @@ Fill this table with the appropriate links (The producer CSV folder should have 
 
 | File Name      | Link |
 | -------------- | ---- |
-| producer CSV folder  |      |
-| latencies.csv  |      |
-| throughput.csv |      |
+| producer.csv   |  [Link](../Data/medium/1con-5prods) |
+| latencies.csv  |  [Link](5p_1c_medium/latencies.csv) |
+| throughput.csv |  [Link](5p_1c_medium/throughput.csv)|
 
 Calculate the following data using Excel or a custom program by analyzing the data in latencies.csv and throughput.csv
 
-| Metric                                   | Value |
-| ---------------------------------------- | ----- |
-| Processing Latency Min                   |       |
-| Processing Latency Max                   |       |
-| Processing Latency Average               |       |
-| Processing Latency Standard Deviation    |       |
-| Processing Throughput Min                |       |
-| Processing Throughput Max                |       |
-| Processing Throughput Average            |       |
-| Processing Throughput Standard Deviation |       |
+| Metric                                   | Value              |
+| ---------------------------------------- | ------------------ |
+| Processing Latency Min                   | 1.0                |
+| Processing Latency Max                   | 121.0              |
+| Processing Latency Average               | 7.1088             |
+| Processing Latency Standard Deviation    | 4.584928229904441  |
+| Processing Throughput Min                | 172.0              |
+| Processing Throughput Max                | 737.0              |
+| Processing Throughput Average            | 625.0              |
+| Processing Throughput Standard Deviation | 185.80635080642426 |
+
 
 ## 3 Producer VM's: 8 Instances - 3 Consumers VM's: 8 Instances - Large Message Size
 
@@ -239,23 +239,25 @@ Fill this table with the appropriate links (the producer CSV folder should have 
 
 | File Name      | Link |
 | -------------- | ---- |
-| producer CSV folder  |      |
-| latencies.csv  |      |
-| throughput.csv |      |
+| producer.csv   |  [Link](../Data/producers) |
+| latencies.csv  |  [Link](24p_24c_large/latencies.csv) |
+| throughput.csv |  [Link](24p_24c_large/throughput.csv)|
 
 Calculate the following data using Excel or a custom program by analyzing the data in latencies.csv and throughput.csv
 
-| Metric                                   | Value |
-| ---------------------------------------- | ----- |
-| Processing Latency Min                   |       |
-| Processing Latency Max                   |       |
-| Processing Latency Average               |       |
-| Processing Latency Standard Deviation    |       |
-| Processing Throughput Min                |       |
-| Processing Throughput Max                |       |
-| Processing Throughput Average            |       |
-| Processing Throughput Standard Deviation |       |
+| Metric                                   | Value               |
+| ---------------------------------------- | ------------------- |
+| Processing Latency Min                   | 6.0                 |
+| Processing Latency Max                   | 3788.0              |
+| Processing Latency Average               | 312.08383333333336  |
+| Processing Latency Standard Deviation    | 454.9947737598881   |
+| Processing Throughput Min                | 0.0                 |
+| Processing Throughput Max                | 528.0               |
+| Processing Throughput Average            | 76.43312101910828   |
+| Processing Throughput Standard Deviation | 88.49911274697212   |
 
+
+### Please Note: Due to resource constraints we we unable to complete the following configuration:
 ## 4 Producer VM's: 25 Intances - 4 Consumer VM's: 25 Intances - X-Large Message Size
 
 Run 25 instances of the producer program on four different VM's (100 instances total). Configure your producers to always send the [x-large](./messages/xlarge.txt) message.
@@ -268,7 +270,7 @@ Fill this table with the appropriate links (the producer CSV folder should have 
 
 | File Name      | Link |
 | -------------- | ---- |
-| producer CSV folder.csv  |      |
+| producer CSV   |      |
 | latencies.csv  |      |
 | throughput.csv |      |
 
