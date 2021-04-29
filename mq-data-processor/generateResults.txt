@@ -1,0 +1,20 @@
+/***Blended ***/
+python3 main.py -d ../Data/tiny/1-and-1
+python3 main.py -d ../Data/small/1prod-5cons
+python3 main.py -d ../Data/medium/1con-5prod
+python3 main.py -d ../Data/medium/1con-5prods
+python3 main.py -d ../Data/large/producers
+
+
+/*** Message Size***/
+python3 main.py -d ../Data/tiny/1-and-1
+python3 main.py -d ../Data/small/1-and-1
+python3 main.py -d ../Data/medium/1-and-1
+python3 main.py -d ../Data/large/1-and-1
+python3 main.py -d ../Data/xlarge/1-and-1
+
+
+/**** Actor Count***/
+python3 main.py -d ../Data/actor_count/1-and-1
+python3 main.py -d ../Data/actor_count/1prod-5cons
+python3 main.py -d ../Data/actor_count/5prod-1con

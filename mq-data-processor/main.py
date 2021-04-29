@@ -15,7 +15,7 @@ def main(**kwargs):
     """
     :key csv_dir: Path to CSV directory containing all producer output files.
     """
-
+    
     csv_dir = kwargs['csv_dir']
     files = os.listdir(csv_dir)
     parser = ProducerFileParser()
